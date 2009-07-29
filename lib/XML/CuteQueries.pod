@@ -114,7 +114,7 @@ of the attribute selector.
     $CQ->parse("<r> <d a='1' b='2'/> <d a='3' b='4'/> </r>");
 
     my @a = $CQ->cute_query('/r/d/@a'=>'', '/r/d/@b'=>'', 'd/@*'=>'');
-    # @a = (1,2, 1,2,3,4)
+    # @a = (1,3, 2,4, 1,2,3,4)
 
 Strictly speaking, XPath and XSL can already do this.  For whatever reason,
 L<XML::Twig> doesn't seem to though.
